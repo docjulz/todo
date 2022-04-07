@@ -17,13 +17,13 @@ function App() {
         </header>
         <Form 
         inputText={inputText} 
-        todos={todos} 
+        todos={todos}         
         setTodos={setTodos} 
         setInputText={setInputText} 
         />
 
         {/* Add setInputText to copy from form input to items in list */}
-        <TodoList todos={todos} />
+        <TodoList setTodos={setTodos} todos={todos} />
     </div>
   );
 }
