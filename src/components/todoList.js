@@ -8,7 +8,8 @@ const TodoList = ({todos}) => {
         <div className="todo-container">
             <ul className="todo-list">
                 {todos.map(todo => (
-                    <Todo text={todo.text} />
+                    // Remember to add a key for all list items
+                    <Todo key={todo.id} text={todo.text} />
                 ))}
             </ul>
         </div>
