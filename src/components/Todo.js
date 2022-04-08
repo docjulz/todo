@@ -9,15 +9,18 @@ const Todo = ({text, todo, todos, setTodos }) => {
         // console.log(todo);
     };
     const completeHandler = () => {
-        setTodos(todos.map(el => {
-            if(el.id === todo.id) {
-                return {
-                    ...el, completed: !el.completed
+        setTodos(
+            todos.map((el) => {
+                if(el.id === todo.id) {
+                    return {
+                        ...el, 
+                        completed: !el.completed,
+                    };
                 }
-            }
-            return el;
-        }))
-    }
+                return el;
+            })
+        );
+    };
     return ( 
         <div className="todo">
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
