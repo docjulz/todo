@@ -10,6 +10,8 @@ function App() {
   const [inputText, setInputText] = useState("");
   // State to store todo's
   const [todos, setTodos] = useState([]);
+  // State for filter
+  const [filter, setFilter] = useState('all');
   return (
     <div className="App">
         <header>
@@ -20,6 +22,7 @@ function App() {
         todos={todos}         
         setTodos={setTodos} 
         setInputText={setInputText} 
+        setFilter={setFilter}
         />
 
         {/* Add setInputText to copy from form input to items in list */}
